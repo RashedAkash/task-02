@@ -4,11 +4,11 @@ import Sidebar from '../components/Sidebar';
 
 const DashboardLayouts = () => {
   return (
-    <div>
-      <div>
+    <div className=' md:grid grid-cols-12'>
+      <div className=' col-span-3'>
         <Sidebar />
       </div>
-      <div>
+      <div className=' col-span-9'>
          <Outlet />
      </div>
     </div>
