@@ -7,7 +7,8 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(FirebaseContext);
   if (loading) {
     return <Loading />
-  };
+  }
+  
   if (user) {
     return children;
   }
