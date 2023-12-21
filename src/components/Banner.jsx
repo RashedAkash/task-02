@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   const backgroundImageUrl =
@@ -17,7 +18,9 @@ const Banner = () => {
         <div className="flex items-center justify-center w-full h-full bg-gray-900/40">
             <div className="text-center">
                 <h1 className="text-3xl font-semibold text-white lg:text-4xl">Build your new <span className="text-red-700">Task</span> </h1>
-                <button className="w-full px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#356169] rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Let’s Explore</button>
+              <Link to='login'>
+               <button className="w-full px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Let’s Explore</button>
+              </Link>
             </div>
         </div>
     </div>
