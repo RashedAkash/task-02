@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form"
 import { FirebaseContext } from '../../Context/AuthContext';
 import Swal from 'sweetalert2'
 
 const Login = () => {
-  const navigate = useNavigate();
+  
   const { googleLogin ,signIn} = useContext(FirebaseContext);
   const {
     register,
@@ -24,7 +24,7 @@ const Login = () => {
   icon: 'success',
   confirmButtonText: 'Congratulation'
         })
-        navigate('/')
+       
       })
       .catch(err => {
       console.log(err.message);
