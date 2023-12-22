@@ -4,7 +4,7 @@ import useAxiosSecure from './useAxiosSecure';
 
 const useData = () => {
   const axiosSecure = useAxiosSecure();
-  const {  data:todo } = useQuery({
+  const {  data:todo,refetch } = useQuery({
   queryKey: ['todo'],
   queryFn: async () => {
     const data = await axiosSecure.get('/todo')
@@ -12,7 +12,7 @@ const useData = () => {
     
   },
 })
-  return {todo}
+  return {todo,refetch}
 };
 
 export default useData;
