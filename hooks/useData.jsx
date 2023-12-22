@@ -5,7 +5,7 @@ import useAxiosSecure from './useAxiosSecure';
 const useData = () => {
   const axiosSecure = useAxiosSecure();
   const {  data:todo } = useQuery({
-  queryKey: ['classes'],
+  queryKey: ['todo'],
   queryFn: async () => {
     const data = await axiosSecure.get('/todo')
     return data.data
